@@ -1,0 +1,27 @@
+my-group:
+  dbname:  ${dbname}
+  username: ${username}
+  password: ${password}
+  appType: prod
+spring:
+  application:
+    name: myapp
+  main:
+    banner-mode: "off"
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    host: localhost
+    url: jdbc:postgresql://${spring.datasource.host}:5432/${my-group.dbname}
+    username: ${my-group.username}
+    password: ${my-group.password}
+  jpa:
+    show-sql: false
+    hibernate.ddl-auto: create-drop
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
