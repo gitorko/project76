@@ -2,7 +2,7 @@
 
 Spring Boot - Vault & Property Refresh
 
-[https://gitorko.github.io/stock-exchange/](https://gitorko.github.io/stock-exchange/)
+[https://gitorko.github.io/spring-vault/](https://gitorko.github.io/spring-vault/)
 
 ### Version
 
